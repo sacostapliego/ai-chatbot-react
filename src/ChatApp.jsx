@@ -5,10 +5,13 @@ import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAi = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
+const genAi = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 const model = genAi.getGenerativeModel({model: "gemini-1.5-pro"});
 
 function ChatApp() {
+
+    <div>hi</div>
+
     const [messages, setMessages] = useState([
         {sender: "ai", text:"Hello, how can I help you today?"},
     ]);
@@ -108,30 +111,6 @@ function ChatApp() {
   return(
     //fade in and out animation while loading
     <div className='flex flex-col h-screen bg-gray-100'>
-        <style jsx global> 
-        {`
-            @keyframes typing {
-                0% {
-                    opacity: 0.3;
-                }
-
-                50% {
-                    opacity: 1;
-                }
-
-                100% {
-                    opacity: 0.3;
-                }
-            }
-
-        .typing-animation{
-            animation: typing 1.5s infinite; 
-        }
-        
-    `}
-
-
-        </style>
         <header className="bg-black p-5 text-white flex justify-center">
             <h1 className='text-3xl font-bold font-sf-pro'>ChatBot</h1>
         </header>
@@ -182,7 +161,7 @@ function ChatApp() {
         </div>
 
         <form onSubmit={handleSubmit} class="p-4 bg-black text-white">
-            <div class="flex items-center">
+            <div className="flex items-center">
                 <input 
                 type="text" 
                 className="flex-1 p-2 border rounded-2xl focus:outline-none bg-black text-white font-sf-pro text-lg"
@@ -191,7 +170,7 @@ function ChatApp() {
                 onChange={(e) => setInput(e.target.value)}
 
                 />
-                <button class="ml-2 p-2 bg-blue-500 text-white rounded-2xl hover:bg-blue-600 focus:outline-none">
+                <button className="ml-2 p-2 bg-blue-500 text-white rounded-2xl hover:bg-blue-600 focus:outline-none">
                     <Send size={24}/>
                 </button>
             </div>
