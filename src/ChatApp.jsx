@@ -5,13 +5,11 @@ import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAi = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
+const genAi = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 const model = genAi.getGenerativeModel({model: "gemini-1.5-pro"});
 
+
 function ChatApp() {
-
-    <div>hi</div>
-
     const [messages, setMessages] = useState([
         {sender: "ai", text:"Hello, how can I help you today?"},
     ]);
@@ -120,7 +118,7 @@ function ChatApp() {
                 <div
                 key={index} 
                 
-                className={`mb-4 
+                className={`mb-4
                 ${message.sender === 'user' 
                 ? 'text-right' 
                 : 'text-left'}`}
