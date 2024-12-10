@@ -22,7 +22,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview --port $PORT",
-    "test": "react-scripts test"
+    "test": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
