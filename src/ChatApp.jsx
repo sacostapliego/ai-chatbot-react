@@ -9,7 +9,6 @@ const genAi = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 const model = genAi.getGenerativeModel({model: "gemini-1.5-pro"});
 
 function ChatApp() {
-    console.log('p:',process.env.REACT_APP_GEMINI_API_KEY)
     const [messages, setMessages] = useState([
         {sender: "ai", text:"Hello, how can I help you today?"},
     ]);

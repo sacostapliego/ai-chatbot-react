@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "HOST=0.0.0.0 PORT=3000 react-scripts start",
+    "start": "react-scripts start",
     "test": "react-scripts start"
   },
   "eslintConfig": {
