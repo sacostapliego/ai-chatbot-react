@@ -10,5 +10,4 @@ Uses JavaScript, React, Tailwind, and Google API
 
 ### Deployed using Render:
 
-[https://hawksfan422.github.io/ai-chatbot-react/
-](https://ai-chatbot-react.onrender.com/)
+[AI-Chatbot-React](https://ai-chatbot-react.onrender.com/)
