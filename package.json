@@ -22,7 +22,7 @@
   "scripts": {
     "protocol": "http://",
     "build": "react-scripts build",
-    "start": "react-scripts start",
+    "start": "cross-env PORT=10000 react-scripts start --host 0.0.0.0",
     "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "gh-pages": "^6.2.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
