@@ -1,9 +1,7 @@
 {
-  "homepage": "https://hawksfan422.github.io/ai-chatbot-react",
   "name": "ai-chatbot-react",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -21,7 +19,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "cross-env PORT=10000 react-scripts start",
+    "start": "cross-env PORT=10000 HOST=0.0.0.0 react-scripts start",
     "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
