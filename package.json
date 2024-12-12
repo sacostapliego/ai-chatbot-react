@@ -20,9 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "protocol": "http://",
     "build": "react-scripts build",
-    "start": "cross-env PORT=10000 react-scripts start --host 0.0.0.0",
+    "start": "cross-env PORT=10000 HOST=0.0.0.0 react-scripts start",
     "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
@@ -45,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
