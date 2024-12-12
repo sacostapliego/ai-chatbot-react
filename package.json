@@ -21,10 +21,8 @@
   },
   "scripts": {
     "protocol": "http://",
-    "host": "0.0.0.0",
-    "port": "3000",
     "build": "react-scripts build",
-    "start": "set PORT=10000  && react-scripts start",
+    "start": "react-scripts start",
     "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
