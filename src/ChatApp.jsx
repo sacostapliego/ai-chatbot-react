@@ -147,8 +147,8 @@ function ChatApp() {
             ))}
 
             {isTyping && (
-              <div class="text-left">
-                <div class="inline-block p-2 rounded-lg bg-zinc-800 font-sf-pro text-lg text-white">
+              <div className="text-left">
+                <div className="inline-block p-2 rounded-lg bg-zinc-800 font-sf-pro text-lg text-white">
                     ...
                 </div>
               </div>  
@@ -157,7 +157,7 @@ function ChatApp() {
             <div ref={messageEndRef}/>
         </div>
 
-        <form onSubmit={handleSubmit} class="p-4 bg-black text-white">
+        <form onSubmit={handleSubmit} className="p-4 bg-black text-white mb-0">
             <div className="flex items-center">
                 <input 
                 type="text" 
